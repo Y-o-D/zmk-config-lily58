@@ -46,11 +46,13 @@
         yow {
             bindings = <&kp GRAVE>;
             key-positions = <55 17>;
+            layers = <0>;
         };
 
         yow2 {
             bindings = <&kp GRAVE>;
             key-positions = <17 52>;
+            layers = <0>;
         };
     };
 
