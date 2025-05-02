@@ -63,16 +63,6 @@
             key-positions = <40 41>;
         };
 
-        To_digits {
-            bindings = <&mo 2>;
-            key-positions = <53 28>;
-        };
-
-        To_arrows {
-            bindings = <&mo 3>;
-            key-positions = <27 53>;
-        };
-
         Question {
             bindings = <&kp QUESTION>;
             key-positions = <16 17>;
@@ -86,6 +76,21 @@
         Zapyataya {
             bindings = <&kp COMMA>;
             key-positions = <14 15>;
+        };
+
+        To_DL {
+            bindings = <&to 0>;
+            key-positions = <14 28>;
+        };
+
+        To_arrows {
+            bindings = <&to 3>;
+            key-positions = <28 26>;
+        };
+
+        To_digits {
+            bindings = <&to 2>;
+            key-positions = <28 38>;
         };
     };
 
@@ -130,11 +135,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                                &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                                 &kp Y   &kp U     &kp I      &kp O    &kp P     &kp LBKT
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                                 &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&mo 1           &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ENTER    &kp CAPSLOCK  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &mo 1        &kp RET       &mo 3   &kp BSPC  &kp RGUI
+&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                                     &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                                      &kp Y   &kp U     &kp I      &kp O    &kp P     &kp LBKT
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                                      &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&mo 1           &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ENTER         &kp CAPSLOCK  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT    &kp RET       &mo 3   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -149,11 +154,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans     &trans    &trans    &trans
-&kp F1         &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE      &kp LA(TAB)   &kp LC(S)     &trans        &trans        &kp PERIOD                      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&kp BACKSPACE  &kp DELETE    &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp COMMA     &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-                                           &trans        &trans        &trans        &mo 0     &trans  &trans     &trans     &trans
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans     &trans     &trans     &trans    &trans    &trans
+&kp F1         &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                  &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&kp GRAVE      &kp LA(TAB)   &kp LC(S)     &trans        &trans        &kp PERIOD                              &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+&kp BACKSPACE  &kp DELETE    &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp COMMA     &trans            &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+                                           &trans        &trans        &trans        &kp LEFT_SHIFT    &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -161,21 +166,21 @@
 
         layer_3 {
             bindings = <
-&kp F1          &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                             &kp F7       &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp TAB         &kp MINUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                           &trans       &trans  &trans  &trans   &trans   &trans
-&kp LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD                         &trans       &trans  &trans  &trans   &trans   &trans
-&kp LCTRL       &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK  &kp ENTER    &trans  &kp KP_PLUS  &trans  &trans  &trans   &trans   &trans
-                                             &kp EQUAL     &kp LEFT_ALT  &kp LCTRL     &mo 0        &trans  &trans       &trans  &trans
+&kp F1          &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                                  &kp F7       &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp TAB         &kp MINUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                &trans       &trans  &trans  &trans   &trans   &trans
+&kp LEFT_SHIFT  &kp NUMBER_0   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PERIOD                              &trans       &trans  &trans  &trans   &trans   &trans
+&kp LCTRL       &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK  &kp ENTER         &trans  &kp KP_PLUS  &trans  &trans  &trans   &trans   &trans
+                                             &kp EQUAL     &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT    &trans  &trans       &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans          &trans          &trans          &trans        &trans           &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB         &trans          &trans          &trans        &trans           &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL       &trans          &kp LC(X)       &kp LC(C)     &kp LC(V)        &trans     &kp ENTER    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans        &kp LEFT_ALT     &kp LCTRL  &mo 0        &trans  &trans  &trans  &trans
+&trans          &trans          &trans          &trans        &trans           &trans                               &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB         &kp F1          &kp F2          &kp F3        &kp F4           &kp F5                               &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F6                               &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &trans          &kp LC(X)       &kp LC(C)     &kp LC(V)        &trans     &kp ENTER         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans        &kp LEFT_ALT     &kp LCTRL  &kp LEFT_SHIFT    &trans  &trans  &trans  &trans
             >;
         };
     };
