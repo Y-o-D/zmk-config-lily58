@@ -92,6 +92,11 @@
             bindings = <&to 2>;
             key-positions = <28 38>;
         };
+
+        Language_switch {
+            bindings = <&kp LA(LEFT_SHIFT)>;
+            key-positions = <25 28>;
+        };
     };
 
     behaviors {
@@ -176,11 +181,11 @@
 
         layer_4 {
             bindings = <
-&trans          &trans          &trans                 &trans        &trans           &trans                               &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB         &kp F1          &kp F2                 &kp F3        &kp F4           &kp F5                               &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW         &kp UP_ARROW  &kp RIGHT_ARROW  &kp F6                               &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL       &trans          &kp LC(LS(SEMICOLON))  &kp AT_SIGN   &kp LC(COLON)    &trans     &kp ENTER         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                       &trans        &kp LEFT_ALT     &kp LCTRL  &kp LEFT_SHIFT    &trans  &trans  &trans  &trans
+&trans          &trans          &trans                 &trans        &trans           &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB         &kp F1          &kp F2                 &kp F3        &kp F4           &kp F5                                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW         &kp UP_ARROW  &kp RIGHT_ARROW  &kp F6                                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &trans          &kp LC(LS(SEMICOLON))  &kp AT_SIGN   &kp LC(COLON)    &kp UNDERSCORE  &kp ENTER         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                       &trans        &kp LEFT_ALT     &kp LCTRL       &kp LEFT_SHIFT    &trans  &trans  &trans  &trans
             >;
         };
     };
