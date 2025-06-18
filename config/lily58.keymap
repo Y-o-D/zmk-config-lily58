@@ -12,72 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        ESC2 {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
-        };
-
-        Tab {
-            bindings = <&kp TAB>;
-            key-positions = <25 26>;
-        };
-
-        CapsLk {
-            bindings = <&kp CAPS>;
-            key-positions = <37 38>;
-        };
-
-        Tochka {
-            bindings = <&kp PERIOD>;
-            key-positions = <38 39>;
-        };
-
-        Del {
-            bindings = <&kp DELETE>;
-            key-positions = <15 16>;
-        };
-
-        Space {
-            bindings = <&kp SPACE>;
-            key-positions = <27 28>;
-        };
-
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <39 40>;
-        };
-
-        Plus {
-            bindings = <&kp PLUS>;
-            key-positions = <28 29>;
-        };
-
-        Minus {
-            bindings = <&kp MINUS>;
-            key-positions = <40 41>;
-        };
-
-        Question {
-            bindings = <&kp QUESTION>;
-            key-positions = <16 17>;
-        };
-
-        Back_Space {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <26 27>;
-        };
-
-        Zapyataya {
-            bindings = <&kp COMMA>;
-            key-positions = <14 15>;
-        };
-
         To_DL {
             bindings = <&to 0>;
             key-positions = <14 28>;
@@ -140,11 +74,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                                     &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                                      &kp Y   &kp U     &kp I      &kp O    &kp P     &kp LBKT
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                                      &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&mo 1           &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ENTER         &kp CAPSLOCK  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT    &kp RET       &mo 3   &kp BSPC  &kp RGUI
+&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                                &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                                 &kp Y   &kp U     &kp I      &kp O    &kp P     &kp LBKT
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G                                 &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&mo 1           &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ENTER    &kp CAPSLOCK  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp SPACE    &kp RET       &mo 3   &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
